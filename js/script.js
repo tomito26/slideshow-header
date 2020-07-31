@@ -1,5 +1,5 @@
 let slideshowImages = document.querySelectorAll('.intro .slideshow-img');
-let nextImageDelay = 3000;
+let nextImageDelay = 4000;
 let currentImageCounter = 0;
 
 slideshowImages[currentImageCounter].style.opacity = 1;
@@ -13,7 +13,7 @@ function nextImage(){
     const tempCounter = currentImageCounter;
     setTimeout(() =>{
         slideshowImages[tempCounter].style.opacity = 0;
-    },100);
+    },1000);
     
     currentImageCounter =(currentImageCounter + 1) % slideshowImages.length;
     slideshowImages[currentImageCounter].style.opacity = 1;
